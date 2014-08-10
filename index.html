@@ -1,0 +1,22 @@
+---
+layout: default
+title: my little bit of the web
+---
+
+<div class="row">
+  <div class="col-xs-12 col-sm-6 col-md-8">
+    <h1>Introduction</h1>
+    <p>
+      This is largely a place for me to vent my spleen and mess
+      around.
+    </p>
+  </div>
+  <div class="col-xs-6 col-sm-3 col-md-4">
+    <h1>Posts</h1>
+    <ul class="posts">
+      {% for post in site.posts %}
+      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
