@@ -16,7 +16,7 @@ Why is this bad?  First off, it's exactly equivalent to:
 x <- log(runif(n))
 ~~~
 
-(because if $X \sim U(0, 1)$, $1 - X \sim U(0,1)$)
+(because if $$X \sim U(0, 1)$$, $$1 - X \sim U(0,1)$$)
 
 But even better, it's also equivalent to:
 
