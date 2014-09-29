@@ -71,7 +71,7 @@ p
 
 And, behold, the cat is free.
 
-If our catnapper is a statistical physicist and is shouting about
+If our catnapper is a statistical physicist[^rudeComment] and is shouting about
 ensembles we can of course tell them that
 $$
 \frac{\sum_i i e^{\nu i}}{\sum_i e^{\nu i}} = S^{-1} \frac{\partial}{\partial \nu} S = \frac{\partial}{\partial \nu} \log S,
@@ -80,3 +80,5 @@ where
 $$
 S = \sum_i e^{\nu i} = \frac{e^\nu - e^{7 \nu}}{1 - e^{\nu}}.
 $$
+
+[^rudeComment]: well, have *you* met any?
