@@ -72,7 +72,7 @@ p
 And, behold, the cat is free.
 
 If our catnapper is a statistical physicist[^rudeComment] and is shouting about
-ensembles we can of course tell them that
+ensembles and partition functions we can of course tell them that
 $$
 \frac{\sum_i i e^{\nu i}}{\sum_i e^{\nu i}} = S^{-1} \frac{\partial}{\partial \nu} S = \frac{\partial}{\partial \nu} \log S,
 $$
