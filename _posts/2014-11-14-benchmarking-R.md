@@ -66,8 +66,9 @@ best of 5 runs is 37.5s.  Now let's try
 try [OpenBLAS](http://www.openblas.net/) - to get 8.94s.
 
 [^invertibility]: Remember, almost all - in the technical sense -
-matrices are invertible, so if you get "You're massively unlucky" you
-_really really_ are.  Don't walk under any ladders.
+		  matrices are invertible, so if you get "You're
+		  massively unlucky" you _really really_ are.  Don't
+		  walk under any ladders.
 
 What we have learnt: the speed of linear algebra is directly related
 to the quality of the linear algebra library.  So if you _must_
@@ -76,7 +77,7 @@ benchmark. But I've done enough HPC to know that if you really care
 you should always use the vendor's optimized linear algebra.  If you
 want an easy but good life, use OpenBLAS or ATLAS.  If you're an idiot
 have *this*
-(lollipop)[http://en.wikipedia.org/wiki/Lollipop#mediaviewer/File:Lollipop-Rainbox-Swirl.jpg]
+(lollipop)[http://en.wikipedia.org/wiki/Lollipop]
 and use the reference BLAS.
 
 In related news, the Pope *is* Catholic and bears do _unspeakable_
