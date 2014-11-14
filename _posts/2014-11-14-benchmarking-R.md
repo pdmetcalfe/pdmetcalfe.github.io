@@ -69,12 +69,12 @@ try [OpenBLAS](http://www.openblas.net/) - to get 8.94s.
 
 What we have learnt: the speed of linear algebra is directly related
 to the quality of the linear algebra library.  So if you _must_ you
-can run R against the MKL, which is the best for this particular
-benchmark. But I've done enough HPC to know that if you really care
-you should always use the vendor's optimized linear algebra.  If you
-want an easy but good life, use OpenBLAS or ATLAS.  If you're an idiot
-have *this* [lollipop](http://en.wikipedia.org/wiki/Lollipop) and use
-the reference BLAS.
+can run R against the absolutely fastest linear algebra library.  But
+I've done enough HPC to know that if you really care you should always
+use the vendor's optimized linear algebra.  If you want an easy but
+good life, use OpenBLAS or ATLAS.  If you're an idiot have *this*
+[lollipop](http://en.wikipedia.org/wiki/Lollipop) and use the
+reference BLAS.
 
 In related news, the Pope *is* Catholic and bears do _unspeakable_
 things in the woods.
