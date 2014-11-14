@@ -16,7 +16,7 @@ BLAS](http://www.netlib.org/blas/).
 
 Let's have a look at the difference with some particularly awful C.
 
-~~~ C
+~~~C
 #include <stdlib.h>
 #include <stdio.h>
 #include <time.h>
@@ -65,10 +65,7 @@ best of 5 runs is 37.5s.  Now let's try
 [ATLAS](http://math-atlas.sourceforge.net/) - to get 9.27s. Now let's
 try [OpenBLAS](http://www.openblas.net/) - to get 8.94s.
 
-[^invertibility]: Remember, almost all - in the technical sense -
-		  matrices are invertible, so if you get "You're
-		  massively unlucky" you _really really_ are.  Don't
-		  walk under any ladders.
+[^invertibility]: Remember, almost all - in the technical sense - matrices are invertible, so if you get "You're massively unlucky" you _really really_ are.  Don't walk under any ladders.
 
 What we have learnt: the speed of linear algebra is directly related
 to the quality of the linear algebra library.  So if you _must_
