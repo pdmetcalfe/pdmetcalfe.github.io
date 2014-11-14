@@ -63,7 +63,7 @@ linear algebra and its the first thing to try to work out how fast a
 linear algebra library is.  Linked against the reference BLAS, the
 best of 5 runs is 37.5s.  Now let's try
 [ATLAS](http://math-atlas.sourceforge.net/) - to get 9.27s. Now let's
-try [OpenBLAS])(http://www.openblas.net/) - to get 8.94s.
+try [OpenBLAS](http://www.openblas.net/) - to get 8.94s.
 
 [^invertibility]: Remember, almost all - in the technical sense -
 matrices are invertible, so if you get "You're massively unlucky" you
