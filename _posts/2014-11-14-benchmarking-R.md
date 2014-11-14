@@ -68,14 +68,13 @@ try [OpenBLAS](http://www.openblas.net/) - to get 8.94s.
 [^invertibility]: Remember, almost all - in the technical sense - matrices are invertible, so if you get "You're massively unlucky" you _really really_ are.  Don't walk under any ladders.
 
 What we have learnt: the speed of linear algebra is directly related
-to the quality of the linear algebra library.  So if you _must_
-you can run R against the MKL, which is the best for this particular
+to the quality of the linear algebra library.  So if you _must_ you
+can run R against the MKL, which is the best for this particular
 benchmark. But I've done enough HPC to know that if you really care
 you should always use the vendor's optimized linear algebra.  If you
 want an easy but good life, use OpenBLAS or ATLAS.  If you're an idiot
-have *this*
-(lollipop)[http://en.wikipedia.org/wiki/Lollipop]
-and use the reference BLAS.
+have *this* [lollipop](http://en.wikipedia.org/wiki/Lollipop) and use
+the reference BLAS.
 
 In related news, the Pope *is* Catholic and bears do _unspeakable_
 things in the woods.
@@ -84,10 +83,10 @@ What I've learnt from this exercise is that I should probably be using
 OpenBLAS rather than ATLAS, so this wasn't a total loss.
 
 How did I switch between these?  Well, I'm an adult and I use
-(Debian)[http://debian.org/], so this was just a bit of
+[Debian](http://debian.org/), so this was just a bit of
 update-alternatives jiggery pokery.
 
 If you've read this far and care about doing benchmarking rigorously,
 this machine was pretty much the cheapest thing that Dell sold
-whenever I bought it.  Oh, and I have to admit that I haven't really
-looked at the R benchmarks cites, but, hey.
+whenever I bought it.  Oh, and I have to admit that I haven't looked
+in detail at the R benchmarks cited, but, hey, life is short.
