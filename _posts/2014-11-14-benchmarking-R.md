@@ -16,7 +16,7 @@ BLAS](http://www.netlib.org/blas/).
 
 Let's have a look at the difference with some particularly awful C.
 
-~~~C
+~~~ C
 #include <stdlib.h>
 #include <stdio.h>
 #include <time.h>
