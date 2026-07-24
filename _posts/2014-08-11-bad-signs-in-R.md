@@ -7,13 +7,13 @@ categories: numerics rng rant R
 This code is a personal bugbear.
 
 ~~~ R
-x <- log(1 - runif(n))
+x <- -log(1 - runif(n))
 ~~~
 
 Why is this bad?  First off, it's exactly equivalent to:
 
 ~~~ R
-x <- log(runif(n))
+x <- -log(runif(n))
 ~~~
 
 (because if $$X \sim U(0, 1)$$, $$1 - X \sim U(0,1)$$)
