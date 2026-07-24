@@ -79,8 +79,7 @@ impl ByteVector {
 }
 ~~~
 
-[^llvm-hates-me]: I originally tried to be clever and write high-level code that would tempt LLVM's autovectorizer. 
-Unfortunately I managed to tempt LLVM to pessimize the code by vectorizing along the wrong axis. The simplest way out was to do the intrinsics by hand, even if I'll have to write more code when I play on `x86_64`.
+[^llvm-hates-me]: I originally tried to be clever and write high-level code that would tempt LLVM's autovectorizer. Unfortunately I managed to tempt LLVM to pessimize the code by vectorizing along the wrong axis. The simplest way out was to do the intrinsics by hand, even if I'll have to write more code when I play on `x86_64`.
 
 Then the counting loop looks up two overlapping 16-byte lanes at once ---
 one for the `C` positions, one shifted right by one for the corresponding
