@@ -4,6 +4,8 @@ title: "Why I now do MCMC with blackjax"
 categories: statistics programming numerics
 ---
 
+Boy, it's been quiet here for a while.
+
 I was an early adopter of the wonder that is [Stan](https://mc-stan.org/), but
 these days (because JAX FTW[^jax]) I'm now doing most of my Bayes in [BlackJAX](https://blackjax-devs.github.io/blackjax/). Herewith a small [eight schools](https://github.com/pdmetcalfe/jax-eight-schools) example, mostly so that I
 have a canonical pattern to point at the next time I need to write a model. For those who haven't yet met it, eight schools (Rubin, 1981) is the [drosophila](https://en.wikipedia.org/wiki/Drosophila) of Bayesian computation --- eight SAT coaching programs, each with an estimated effect and a standard error, and the question of how much to shrink each estimate towards the others.
@@ -85,7 +87,7 @@ Nothing here knows or cares about NUTS, warmup, or
 sampling at all --- it's a description of the statistics, full stop.
 
 The `[..., None]` broadcasting is there on purpose. Because
-`Parameters` is a registered JAX pytree --- there's no reason its fields
+`Parameters` is a registered JAX pytree, there's no reason its fields
 have to hold a single draw. Run the sampler and you get `Parameters` whose
 fields have shape `(chain, draw)` or `(chain, draw, num_schools)`, and every
 one of these methods keeps working unmodified, because the arithmetic was
