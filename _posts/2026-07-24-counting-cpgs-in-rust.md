@@ -50,8 +50,7 @@ pub fn simple(data: &[u8]) -> usize {
 so every adjacent pair gets checked exactly once. On chromosome 1 this
 takes about 190ms. Nothing clever, nothing wrong with it[^perfectly-good].
 
-[^perfectly-good]: And also probably good enough for use in practice. But who wants "good enough"
-when we could have "perfection"?
+[^perfectly-good]: And also probably good enough for use in practice. But who wants "good enough" when we could have "perfection"?
 
 ### SIMD take 1
 
@@ -80,10 +79,8 @@ impl ByteVector {
 }
 ~~~
 
-[^llvm-hates-me]: I originally tried to be clever and write high-level code that would tempt LLVM's autovectorizer.
-Unfortunately I managed to tempt LLVM to pessimize the code by vectorizing along
-the wrong axis. The simplest way out was to do the intrinsics by hand, even if I'll have
-to write more code when I play on `x86_64`.
+[^llvm-hates-me]: I originally tried to be clever and write high-level code that would tempt LLVM's autovectorizer. 
+Unfortunately I managed to tempt LLVM to pessimize the code by vectorizing along the wrong axis. The simplest way out was to do the intrinsics by hand, even if I'll have to write more code when I play on `x86_64`.
 
 Then the counting loop looks up two overlapping 16-byte lanes at once ---
 one for the `C` positions, one shifted right by one for the corresponding
