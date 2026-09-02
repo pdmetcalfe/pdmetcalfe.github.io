@@ -59,7 +59,7 @@ removed and replaced by Parts IIC and IID. Go figure.
 
 #{
   let cells = ()
-  let github = "https://github.com/pdmetcalfe/cambridge-maths/tree/master"
+  let github = "https://github.com/pdmetcalfe/cambridge-maths/tree/main"
   for (year, year_courses) in courses {
     cells.push(table.cell([Part #year], rowspan: year_courses.len()))
     for (course, slug) in year_courses {
