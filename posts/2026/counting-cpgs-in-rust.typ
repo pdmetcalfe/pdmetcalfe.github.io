@@ -4,7 +4,7 @@
 #metadata((
   title: "How fast can you count CpGs? (Rust edition)",
   kind: "post",
-  date: "2026-07-24",
+  date: "2026-07-26",
   tags: ("programming", "rust", "numerics"),
   summary: "profile before you SIMD",
 )) <website-metadata>
