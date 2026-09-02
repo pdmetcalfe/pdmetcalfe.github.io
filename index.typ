@@ -28,9 +28,9 @@ This is my little home on the web, where I can whinge about things that irritate
   html.elem("img", "", attrs: (
     class: "calepin-float-right calepin-scaffold-portrait",
     src: "assets/portrait.jpg",
-    alt: "Portrait photograph",
-    width: "1280",
-    height: "1920",
+    alt: "One man and his dog",
+    width: "1440",
+    height: "1440",
     loading: "lazy",
     decoding: "async",
   ))
