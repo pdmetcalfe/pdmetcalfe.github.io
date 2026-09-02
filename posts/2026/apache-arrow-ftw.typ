@@ -69,4 +69,6 @@ barriers, and the data is stored in columnar formats that make it hyper-efficien
 and GPUs to scan through it and do the computations they need to do.
 
 Because these problems are now _solved_ there's a whole class of problems you no longer need to
-worry about. So stop worrying. Use Arrow and Parquet and make your lives easier.
+worry about. So stop worrying. Use Arrow and Parquet and make your lives easier.#footnote[And of
+course don't waste your time inventing
+#link("https://www.cdisc.org/standards/data-exchange/dataset-json")[`dataset-json`] 🤦.]
