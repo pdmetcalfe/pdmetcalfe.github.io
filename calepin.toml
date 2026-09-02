@@ -1,0 +1,69 @@
+title = "Paul's home from home"
+description = "My personal website."
+# base-url = "https://example.com"
+# Try the bundled themes:
+# theme = "calepin"
+# theme = "academic"
+theme = "calepin"
+
+pdf = false
+typ = false
+minify = true
+
+default-language = "en"
+
+# Uncomment to generate static search if Pagefind is available.
+# search = "pagefind"
+
+# Uncomment to generate web feeds after setting base-url.
+# feeds = true
+
+[languages.en]
+label = "English"
+content-dir = "."
+
+[static]
+include = ["assets/**"]
+
+[pages]
+include = ["posts/**/*.typ"]
+
+[[menus.main]]
+target = "about.typ"
+label = "About"
+
+[[menus.main]]
+target = "blog.typ"
+label = "Blog"
+
+[[menus.social]]
+target = "https://github.com/pdmetcalfe/"
+label = "{icon:github}"
+aria-label = "GitHub"
+
+[footer]
+
+[[footer.item]]
+label = "© 2026 Paul Metcalfe"
+
+[[footer.item]]
+target = "https://vincentarelbundock.github.io/calepin"
+label = "Made with Calepin"
+
+[sidebar]
+fold = false
+
+[[sidebar.section]]
+title = "Start"
+
+  [[sidebar.section.item]]
+  target = "index.typ"
+
+  [[sidebar.section.item]]
+  target = "about.typ"
+
+  [[sidebar.section.item]]
+  target = "cambridge_notes.typ"
+
+  [[sidebar.section.item]]
+  target = "blog.typ"
