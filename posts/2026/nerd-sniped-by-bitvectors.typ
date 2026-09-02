@@ -69,7 +69,8 @@ pub fn unpack_bits_chunked(source: &[u8], count: usize) -> Vec<bool> {
 }
 ```
 
-#link("https://godbolt.org/z/3Mssooc9v")[Godbolt] now shows a _whole mess_ (technical term). But this is nice code. What we've got is a bulk NEON 16-bytes-at-a-time loop, then we've got a NEON 1-byte-at-a-time loop to clean up anything that's not a multiple of 16 bytes, and then we've finally got the tail bits handling. Aren't compilers great? (The NEON version is *always* faster than the scalar version, by a factor of approximately 10 for large arrays.)
+#link("https://godbolt.org/z/3Mssooc9v")[Godbolt] now shows a _whole mess_ (technical term). But this is nice code. What we've got is a bulk NEON 16-bytes-at-a-time loop, then we've got a NEON 1-byte-at-a-time loop to clean up anything that's not a multiple of 16 bytes, and then we've finally got the tail bits handling. Aren't compilers great? (The NEON version is *always* faster than the scalar version, by a factor of approximately 10 for large arrays.)#footnote[Note for Real Men: you can beat this version a little bit with a simple
+lookup table, and if you *really* must you can write SIMD intrinsics to get about a factor of two improvement.]
 
 However. The nice code snippet above is where I ended up. I _actually_ went via #link("https://godbolt.org/z/4c1xcq3ov")[this version] because I was clever and tried to abstract out the commonalities that I was going to need to try a few different passes. And that was interesting. Looking at *that* code we see that:
 
