@@ -4,7 +4,7 @@
 #metadata((
   title: "Nerd sniped by bit vectors",
   kind: "post",
-  date: "2026-08-25",
+  date: "2026-08-26",
   tags: ("programming", "rust", "optimization"),
   summary: "compilers are weird",
 )) <website-metadata>
