@@ -59,6 +59,6 @@ write_parquet: 0.183 secs
 read_parquet:  0.021 secs
 ```
 
-TDLR... Do Do #link("https://arrow.apache.org/")[Arrow], Do Not Do `.sas7bdat`.
+TLDR... Do Do #link("https://arrow.apache.org/")[Arrow], Do Not Do `.sas7bdat`.
 You too can save a factor of 20 on your storage costs *and* make your
 data scientists happy into the bargain.
