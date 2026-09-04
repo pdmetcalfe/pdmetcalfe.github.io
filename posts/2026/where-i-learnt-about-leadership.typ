@@ -39,7 +39,7 @@ a team North Star".
 = Lesson ye second
 
 So I have dogs, and have therefore spent a bit of time working with them. Specifically,
-I have a Doberman and a working like spaniel. Neither is an "easy" breed. Spaniels are
+I have a Doberman and a working line spaniel. Neither is an "easy" breed. Spaniels are
 highly scent-driven, built to find, flush, and retrieve game, and *really* want to do that.
 Dobermans were originally bred for personal protection, are highly vigilant and easily
 distracted. So how do you work with either breed?
