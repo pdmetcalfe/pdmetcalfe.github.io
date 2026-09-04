@@ -40,7 +40,7 @@ cat(sprintf("write_parquet: %.3f %s\n", write_time, units(write_time)))
 cat(sprintf("read_parquet:  %.3f %s\n", read_pq_time, units(read_pq_time)))
 ```
 
-Question... guess the output. The file sizes are instructive: that which in
+Question... guess the output. The file sizes are notable: that which in
 `.sas7bdat` is 15 MB is three quarters of a megabyte in _uncompressed_ `.parquet`.
 
 ```
