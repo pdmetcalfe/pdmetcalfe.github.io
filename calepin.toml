@@ -1,6 +1,6 @@
 title = "Paul's home from home"
 description = "My personal website."
-# base-url = "https://example.com"
+base-url = "https://pdmetcalfe.github.io/"
 # Try the bundled themes:
 # theme = "calepin"
 # theme = "academic"
@@ -16,7 +16,7 @@ default-language = "en"
 # search = "pagefind"
 
 # Uncomment to generate web feeds after setting base-url.
-# feeds = true
+feeds = true
 
 [languages.en]
 label = "English"
