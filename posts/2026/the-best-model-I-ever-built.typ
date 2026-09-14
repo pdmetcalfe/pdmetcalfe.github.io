@@ -11,7 +11,7 @@
 
 #title()
 
-I once built a statistical prediction model with $"AUC" ~= 0.99$, and in \$HOWEVER_MANY
+I once built a statistical prediction model with $"AUC" approx 0.99$, and in \$HOWEVER_MANY
 years of doing this stuff that remains the most predictive model I have ever built. The
 story is perhaps instructive. One of the Folks From The Other Functions turned up with
 a dataset, a binary patient outcome, and A Bunch Of Data from a new assay they were testing
