@@ -579,17 +579,17 @@ pub fn unpack_bits(src: &[u8], count: usize) -> Vec<bool> {
     let (src_unroll, src_bytes) = src_bytes.as_chunks::<UNROLL>();
 
     for (dst, src) in dest_unroll.iter_mut().zip(src_unroll) {
-        *dst = src.map(|x| x.unpack().map(MaybeUninit::new));
+        *dst = src.map(|x| ByteLut(x).unpack().map(MaybeUninit::new));
     }
 
     for (dst, src) in dest_bytes.iter_mut().zip(src_bytes) {
-        *dst = src.unpack().map(MaybeUninit::new);
+        *dst = ByteLut(*src).unpack().map(MaybeUninit::new);
     }
 
     if !dest_tail.is_empty() {
         // by construction of src_tail
         let src = src_tail.first().expect("the impossible has happened");
-        for (dst, src) in dest_tail.iter_mut().zip(src.unpack()) {
+        for (dst, src) in dest_tail.iter_mut().zip(ByteLut(*src).unpack()) {
             dst.write(src);
         }
     }
