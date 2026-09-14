@@ -322,7 +322,7 @@ LBB0_7:
 
 Compare that to our previous best effort; here we have roughly a dozen instructions versus the previous 200-ish
 lines of widening and interleaving#footnote[One minor nit is that LLVM has not been able to
-elide the checks in `.split_at` and `.split_at_mut`. If I really cared I'd use the `_unchecked` versions.]).
+elide the checks in `.split_at` and `.split_at_mut`. If I really cared I'd use the `_unchecked` versions.].
 
 = Skipping the zero-fill
 
@@ -645,7 +645,7 @@ LBB4_6:
 pulling bytes 1-3 out of the word already loaded, avoiding any separate per-byte source load. The four
 table lookups are independent, with no data dependency on each other and the two `stp`s write all 32
 bools in two instructions.  Bounds checks are unchanged from every other variant: one check
-before the loop, nothing inside it. And, interestingly, we're not using any NEON at all.
+before the loop, nothing inside it.
 
 == Where we got to
 
