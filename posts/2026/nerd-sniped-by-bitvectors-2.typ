@@ -566,39 +566,36 @@ impl Unpackable for ByteLut {
 }
 
 pub fn unpack_bits(src: &[u8], count: usize) -> Vec<bool> {
-    let mut result_vec = Vec::<bool>::with_capacity(count);
-    let result = &mut result_vec.spare_capacity_mut()[..count];
+    let mut result = Vec::with_capacity(count);
+    let res = &mut result.spare_capacity_mut()[..count];
     let src = &src[..count.div_ceil(8)];
 
-    const RESULT_BYTES: usize = 8;
     const UNROLL: usize = 4;
 
-    let num_result_chunks = count.div_euclid(RESULT_BYTES);
-    let (result_chunks, result_tail) = result.split_at_mut(RESULT_BYTES * num_result_chunks);
-    let (source_bytes, _) = src.split_at(num_result_chunks);
+    let (dest_bytes, dest_tail) = res.as_chunks_mut::<8>();
+    let (src_bytes, src_tail) = src.split_at(dest_bytes.len());
 
-    let result_chunks = result_chunks.as_chunks_mut::<RESULT_BYTES>().0;
+    let (dest_unroll, dest_bytes) = dest_bytes.as_chunks_mut::<UNROLL>();
+    let (src_unroll, src_bytes) = src_bytes.as_chunks::<UNROLL>();
 
-    let (big_result_chunks, result_chunks) = result_chunks.as_chunks_mut::<UNROLL>();
-    let (big_source_bytes, source_bytes) = source_bytes.as_chunks::<UNROLL>();
-
-    for (big_result_chunk, big_source_byte) in big_result_chunks.iter_mut().zip(big_source_bytes) {
-        *big_result_chunk = big_source_byte.map(|x| ByteLut(x).unpack().map(MaybeUninit::new));
+    for (dst, src) in dest_unroll.iter_mut().zip(src_unroll) {
+        *dst = src.map(|x| x.unpack().map(MaybeUninit::new));
     }
 
-    for (result_chunk, &source_byte) in result_chunks.iter_mut().zip(source_bytes) {
-        *result_chunk = ByteLut(source_byte).unpack().map(MaybeUninit::new);
+    for (dst, src) in dest_bytes.iter_mut().zip(src_bytes) {
+        *dst = src.unpack().map(MaybeUninit::new);
     }
 
-    if !result_tail.is_empty() {
-        let last = src.last().expect("we must have a byte here");
-        for (dst, src) in result_tail.iter_mut().zip(ByteLut(*last).unpack()) {
+    if !dest_tail.is_empty() {
+        // by construction of src_tail
+        let src = src_tail.first().expect("the impossible has happened");
+        for (dst, src) in dest_tail.iter_mut().zip(src.unpack()) {
             dst.write(src);
         }
     }
 
-    unsafe { result_vec.set_len(count) };
-    result_vec
+    unsafe {result.set_len(count)};
+    result
 }
 ```
 
@@ -644,8 +641,8 @@ LBB4_6:
 (`ldr w15`, 4 bytes) -- the other three "byte extractions" (`and`/`ubfx`/`lsr`) are pure register ops
 pulling bytes 1-3 out of the word already loaded, avoiding any separate per-byte source load. The four
 table lookups are independent, with no data dependency on each other and the two `stp`s write all 32
-bools in two instructions.  Bounds checks are unchanged from every other variant: one check
-before the loop, nothing inside it.
+bools in two instructions.  Bounds checks are in fact simplified: LLVM can prove our `split_at` and
+our `first` don't go to the Bad Place, presumably because the loop setup code is much simpler.
 
 == Where we got to
 
