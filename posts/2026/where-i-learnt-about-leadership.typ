@@ -17,7 +17,7 @@ after you've started doing it#footnote["Hi, you're now a line manager, we'll sen
 you on the Various Training Courses in a couple of months."]). But there are other
 places I've picked up things too.
 
-= Lession ye first
+= Lesson ye first
 
 In my copious free time I enjoy hillwalking#footnote[Opportunities to do it in East Anglia are
 for some reason a little bit limited, but back in my youth I lived in the frozen North.]. My wife
