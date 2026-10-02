@@ -18,7 +18,9 @@ these days (because JAX FTW#footnote[If you do not yet know about JAX, immediate
 away and #link("https://docs.jax.dev/en/latest/index.html")[read this].]) I'm now doing most
 of my Bayes in #link("https://blackjax-devs.github.io/blackjax/")[BlackJAX]. Herewith a
 small #link("https://github.com/pdmetcalfe/jax-eight-schools/")[eight schools] example, mostly
-so that I have a canonical pattern to point at the next time I need to write a model. For those
+so that I have a canonical pattern to point at the next time I need to write a
+model#footnote[I was unable to talk #link("https://zahrcast.com/")[Karim] into giving JAX a go,
+so #link("https://arxiv.org/abs/2607.17908")[this is a heroic level of stan].]. For those
 who haven't yet met it, eight schools (Rubin, 1981) is the
 #link("https://en.wikipedia.org/wiki/Drosophila")[drosophila] of Bayesian computation ---
 eight SAT coaching programs, each with an estimated effect and a standard error, and the question
