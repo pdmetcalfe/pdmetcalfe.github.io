@@ -245,7 +245,7 @@ the same time and break the dependency chain on `f64` addition), so let's explic
 struct FloatAccum([FloatVec;8]);
 
 impl FloatAccum {
-    fn mask(self, na_bits: u64) -> (FloatAccum, MaskVec) {
+    fn mask(self, na_bits: u64) -> (FloatAccum, MaskAccum) {
         let mut floats = FloatAccum::default();
         let mut masks = MaskAccum::default();
         for ((dst_float, dst_mask), src_float) in floats.0.iter_mut().zip(masks.0.iter_mut()).zip(self.0) {
