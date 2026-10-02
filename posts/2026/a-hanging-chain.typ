@@ -5,7 +5,7 @@
   title: "A hanging chain",
   kind: "post",
   date: "2026-09-10",
-  tags: ("maths"),
+  tags: ("maths",),
   summary: "cool maths",
 )) <website-metadata>
 

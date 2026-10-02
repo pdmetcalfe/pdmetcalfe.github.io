@@ -14,7 +14,7 @@
 So I've spent a bit of time doing the line management thing and have therefore had the Official
 Corporate Training, which like any Official Corporate Training happens somewhat
 after you've started doing it#footnote["Hi, you're now a line manager, we'll send
-you on the Various Training Courses in a couple of months."]). But there are other
+you on the Various Training Courses in a couple of months."]. But there are other
 places I've picked up things too.
 
 = Lesson ye first

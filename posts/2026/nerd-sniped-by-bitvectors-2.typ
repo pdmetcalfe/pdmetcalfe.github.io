@@ -76,7 +76,7 @@ Two things stand out:
 - *Bounds check #2*, inside the loop, is paid on *every single element*. It's redundant:
   `source_byte = ind / 8` for `ind < count` is always `< count.div_ceil(8) == src.len()` after the reslice above. 
   LLVM can't see that relationship through the ceiling division, so it inserts a `cmp` + conditional branch per bit unpacked anyway.
-  While branches make or may not be predictable, the greater problem is that this has stopped LLVM from doing Deep Compiler Magic.
+  While branches may or may not be predictable, the greater problem is that this has stopped LLVM from doing Deep Compiler Magic.
 
 So let's go and make it clear to LLVM that it is safe to invoke the deep magic.
 
