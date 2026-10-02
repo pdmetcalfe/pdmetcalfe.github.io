@@ -67,7 +67,7 @@ What this does is generate a random 5000x5000 matrix and compute its
 LU factorization#footnote[Remember, almost all --- in the technical sense --- square 
 matrices are invertible, so if you get "You're massively unlucky" you _really really_ are. 
 Don't walk under any ladders.].  The LU factorization bit is a standard bit of
-linear algebra and its the first thing to try to work out how fast a
+linear algebra and it's the first thing to try to work out how fast a
 linear algebra library is.  Linked against the reference BLAS, the
 best of 5 runs is 37.5s.  Now let's try
 #link("http://math-atlas.sourceforge.net/")[ATLAS] - to get 9.27s. Now let's
