@@ -61,7 +61,7 @@ pub fn unpack_bits_chunked(source: &[u8], count: usize) -> Vec<bool> {
     if tail_bits > 0 {
         let byte = source.last().expect("there *must* be a last element");
         for (ind, dest) in chunks.into_remainder().iter_mut().enumerate() {
-            *dest = is_set(byte, ind)
+            *dest = is_set(*byte, ind)
         }
     }
 
