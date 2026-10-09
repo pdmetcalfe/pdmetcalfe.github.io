@@ -33,6 +33,10 @@ target = "about.typ"
 label = "About"
 
 [[menus.main]]
+target = "publications.typ"
+label = "Publications"
+
+[[menus.main]]
 target = "blog.typ"
 label = "Blog"
 
@@ -61,6 +65,9 @@ title = "Start"
 
   [[sidebar.section.item]]
   target = "about.typ"
+  
+  [[sidebar.section.item]]
+  target = "publications.typ"
 
   [[sidebar.section.item]]
   target = "cambridge_notes.typ"
