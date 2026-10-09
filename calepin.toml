@@ -33,10 +33,6 @@ target = "about.typ"
 label = "About"
 
 [[menus.main]]
-target = "publications.typ"
-label = "Publications"
-
-[[menus.main]]
 target = "blog.typ"
 label = "Blog"
 
